@@ -7,7 +7,7 @@ RecipesWithBackboneJs.Views.RecipesIndex = Backbone.View.extend({
   },
 
   render: function() {
-    $(this.el).html(this.template({ recipes: this.collection }));
+    $(this.el).html(this.template({ recipes: this.collection.toJSON() }));
     return this;
   }
 
