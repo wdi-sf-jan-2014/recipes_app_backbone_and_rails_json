@@ -26,6 +26,11 @@ RecipesWithBackboneJs.Views.RecipesIndex = Backbone.View.extend({
     this.collection.create({ 
       name: $('#new_recipe #name').val(), 
       description: $('#new_recipe #description').val() 
+    }, {
+      wait: true,
+      success: function() {
+        return $('#new_recipe')[0].reset();
+      }
     });
   }
 
