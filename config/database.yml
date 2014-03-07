@@ -19,8 +19,6 @@ development:
   encoding: unicode
   database: recipes_with_backbone_js_development
   pool: 5
-  username: recipes_with_backbone_js
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +46,9 @@ test:
   encoding: unicode
   database: recipes_with_backbone_js_test
   pool: 5
-  username: recipes_with_backbone_js
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: recipes_with_backbone_js_production
   pool: 5
-  username: recipes_with_backbone_js
-  password:
