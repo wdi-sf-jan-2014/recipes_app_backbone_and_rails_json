@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require handlebars.runtime
 //= require underscore
 //= require backbone
 //= require recipes_with_backbone_js
