@@ -1,5 +1,20 @@
 <h2>Recipes</h2>
 
+<form role='form' id='new_recipe'>
+  <div class='form-group'>
+    <label for='name'>Name</label>
+    <input type='text' name='name' id='name' 
+      class='form-control' placeholder='Enter name'>
+  </div>
+  <div class='form-group'>
+    <label for='description'>Name</label>
+    <input type='text' name='description' id='description' 
+      class='form-control' placeholder='Enter description'>
+  </div>
+
+  <input type='submit' class='btn btn-success' value='Add Recipe'>
+</form>
+
 {{#each recipes}}
   {{name}}
   {{description}}
