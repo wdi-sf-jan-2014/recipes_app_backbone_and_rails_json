@@ -6,6 +6,7 @@ RecipesWithBackboneJs.Views.RecipesIndex = Backbone.View.extend({
   },
 
   initialize: function() {
+    _.bindAll(this, 'create_recipe_success');
     this.collection.on('reset', this.render, this);
     this.collection.on('add', this.render_recipe, this);
   },
@@ -28,10 +29,13 @@ RecipesWithBackboneJs.Views.RecipesIndex = Backbone.View.extend({
       description: $('#new_recipe #description').val() 
     }, {
       wait: true,
-      success: function() {
-        return $('#new_recipe')[0].reset();
-      }
+      success: this.create_recipe_success
     });
+  },
+
+  create_recipe_success: function(recipe, response, options) {
+    $('#new_recipe')[0].reset();
+    RecipesWithBackboneJs.router.navigate('recipes/' + recipe.get('id'));
   }
 
 });
