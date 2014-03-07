@@ -4,6 +4,8 @@ window.RecipesWithBackboneJs = {
   Views: {},
   Routers: {},
   initialize: function() {
+    new RecipesWithBackboneJs.Routers.Recipes(); 
+    Backbone.history.start(); 
   }
 };
 
