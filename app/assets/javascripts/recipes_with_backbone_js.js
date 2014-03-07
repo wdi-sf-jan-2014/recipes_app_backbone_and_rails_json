@@ -5,7 +5,7 @@ window.RecipesWithBackboneJs = {
   Routers: {},
   initialize: function() {
     new RecipesWithBackboneJs.Routers.Recipes(); 
-    Backbone.history.start(); 
+    Backbone.history.start({pushState: true}); 
   }
 };
 
