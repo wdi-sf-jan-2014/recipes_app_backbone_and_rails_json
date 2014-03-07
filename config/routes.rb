@@ -1,5 +1,9 @@
 RecipesWithBackboneJs::Application.routes.draw do
   root 'main#index'
 
-  resources :recipes
+  scope 'api' do
+    resources :recipes
+  end
+
+  get '*any', to: 'main#index'
 end

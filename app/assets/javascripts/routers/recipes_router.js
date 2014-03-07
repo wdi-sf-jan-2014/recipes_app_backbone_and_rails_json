@@ -1,6 +1,6 @@
 RecipesWithBackboneJs.Routers.Recipes = Backbone.Router.extend({
   routes: { 
-    '': 'index'
+    'recipes': 'index'
   },
 
   index: function() {
